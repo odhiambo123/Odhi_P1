@@ -5,14 +5,14 @@
 - Have a list
 - List requirements:
  - Have a title
-Search and sort
-Data must load from backend (API endpoint)
-Pagination
-Click on list item -> show detail view
-While list is loading -> show loader
-If list is empty -> let user know is empty
-Form Requirement:
-Must have a title
+ - Search and sort
+ - Data must load from backend (API endpoint)
+ - Pagination
+ - Click on list item -> show detail view
+ - While list is loading -> show loader
+ - If list is empty -> let user know is empty
+- Form Requirement:
+ - Must have a title
 Every field must have a label
 Field level validation
 let user know if what's being typed is what is expected
