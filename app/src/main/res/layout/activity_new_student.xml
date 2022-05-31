@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cardcolor">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <!--Start of Id field-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:helperText="Enter ID"
+        android:layout_marginStart="16dp"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/stud_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:hint="@string/enter_id"
+        android:minHeight="48dp"
+        android:textColorHint="@color/teal_700" />
+    <!--Edn of Id field******************************************-->
+
+    <!--Start of First Name ************************************-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:helperText="@string/First_Name"
+        android:layout_marginStart="16dp"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/enter_fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:hint="@string/first_name"
+        android:minHeight="48dp"
+        android:textColorHint="@color/teal_700" />
+
+
+    <!--End  of First Name ************************************-->
+
+
+    <!--Start of Last Name ************************************-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:helperText="@string/Last_name"
+        android:layout_marginStart="16dp"
+
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/enter_lname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:hint="@string/Last_name"
+        android:minHeight="48dp"
+        android:textColorHint="@color/teal_700" />
+
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_margin="@dimen/cardview_default_elevation"
+         />
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="@string/cancel"
+        android:layout_margin="@dimen/cardview_default_elevation"
+        />
+
+</LinearLayout>
