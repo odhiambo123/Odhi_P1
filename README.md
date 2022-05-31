@@ -12,7 +12,7 @@
   - While list is loading -> show loader
   - If list is empty -> let user know is empty
 - Form Requirement:
- - Must have a title
+  - Must have a title
 Every field must have a label
 Field level validation
 let user know if what's being typed is what is expected
