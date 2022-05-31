@@ -4,7 +4,7 @@
 - Implement CRUD
 - Have a list
 - List requirements:
-- - Have a title
+ - Have a title
 Search and sort
 Data must load from backend (API endpoint)
 Pagination
