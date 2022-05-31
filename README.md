@@ -4,13 +4,13 @@
 - Implement CRUD
 - Have a list
 - List requirements:
- - Have a title
- - Search and sort
- - Data must load from backend (API endpoint)
- - Pagination
- - Click on list item -> show detail view
- - While list is loading -> show loader
- - If list is empty -> let user know is empty
+  - Have a title
+  - Search and sort
+  - Data must load from backend (API endpoint)
+  - Pagination
+  - Click on list item -> show detail view
+  - While list is loading -> show loader
+  - If list is empty -> let user know is empty
 - Form Requirement:
  - Must have a title
 Every field must have a label
