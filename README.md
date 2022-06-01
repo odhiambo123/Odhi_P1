@@ -24,3 +24,11 @@
 - Add form level validation to make sure all required fields are filled out
 - On submission of the form, once response is received add a response Toast
 - Uniformity - all items follow same format to make sure its consistent
+
+## Common git usage
+
+- git branch -r
+- git push origin HEAD
+- git pull main \<branch\>
+- git checkout \<branch\>
+- git branch --set-upstream-to=origin/main \<branch\>
