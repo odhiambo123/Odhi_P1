@@ -29,5 +29,5 @@
 
 - git branch -r
 - git push origin HEAD
-- git pull main <branch>
+- git pull main \<branch\>
   git checkout <branch>
