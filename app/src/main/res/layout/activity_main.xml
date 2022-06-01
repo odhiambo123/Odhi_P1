@@ -1,55 +1,72 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="@drawable/gradient">
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
 
-    <Button
-        android:id="@+id/sort_btn"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sort"
-        android:layout_gravity="bottom"
-        />
+        tools:context=".MainActivity"
+        >
 
-    <Button
-        android:id="@+id/retry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:visibility="gone"
-        android:visibility="visible"
-        android:text="@string/retry"
-        android:textAllCaps="false"
+                <LinearLayout
 
-        />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="4dp"
+
+                    android:background="@drawable/gradient">
+
+                <Button
+                    android:id="@+id/sort_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sort"
+                    android:layout_gravity="bottom"
+                    />
+
+                <Button
+                    android:id="@+id/retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:visibility="gone"
+                    android:visibility="visible"
+                    android:text="@string/retry"
+                    android:textAllCaps="false"
+
+                    />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            tools:itemCount="10"
+            tools:itemCount="1"
             android:layout_weight="1"
-
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/student_list_layout"
-            android:layout_margin="20dp"
+            android:nestedScrollingEnabled="false"
+            android:layout_margin="16dp"
             >
 
         </androidx.recyclerview.widget.RecyclerView>
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/plus_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/add_button"
+                            android:layout_gravity="end"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ic_baseline_add_circle_24"
+                            />
+                    <ProgressBar
+                        android:id="@+id/progress_circular"
+                        tools:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/plus_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/add_button"
-        android:layout_gravity="end"
-        android:layout_marginBottom="30dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_baseline_add_circle_24"
-        />
-
-</LinearLayout>

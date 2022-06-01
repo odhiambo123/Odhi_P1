@@ -6,8 +6,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.NestedScrollView
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,12 +20,24 @@ import kotlinx.coroutines.runBlocking
 import java.lang.Thread.sleep
 
 open class MainActivity : AppCompatActivity() {
+
+    //MY VARIABLES
+
+    //STUDENT LIST
     var studentList = ArrayList<Students>()
 
-    //vm object
+    //viewModel Object
     lateinit var vm : MainViewModel
 
+    //Adapter
     lateinit var adapter: StudentAdapter
+
+    //Nested Scroll view
+    lateinit var nestedScrollView: NestedScrollView
+
+    //PROGRESSBAR
+    lateinit var progressBar: ProgressBar
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,18 +63,10 @@ open class MainActivity : AppCompatActivity() {
     plus.setOnClickListener()
         {
             val myIntent1 = Intent(this, NewStudent::class.java)
-            /*val fromMain = Intent(this, ProgressPage::class.java)
-            startActivity(fromMain)*/
-            //sleep(1000L)
+
             startActivity(myIntent1)
         }
 
-        /*searchbtn.setOnClickListener() {
-
-            val myIntent = Intent(this, SearchableActivity::class.java)
-
-            startActivity(myIntent)
-        }*/
         vm.allStudents?.observe(this, { studentList ->
             getStudents(studentList)
         })
