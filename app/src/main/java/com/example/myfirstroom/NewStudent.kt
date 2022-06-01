@@ -29,9 +29,10 @@ class NewStudent : AppCompatActivity() {
 
         val saveStudent: Button = findViewById(R.id.btn_save)
         saveStudent.setOnClickListener(){
-            val newStu = Students(myStudId.text.toString().toInt(), nsFirstName.text.toString(),nsLastName.text.toString())
+
 
             if (myStudId.text.isNotEmpty() && nsFirstName.text.isNotEmpty() && nsLastName.text.isNotEmpty()) {
+                val newStu = Students(myStudId.text.toString().toInt(), nsFirstName.text.toString(),nsLastName.text.toString())
 
                 Toast.makeText(this, "success", Toast.LENGTH_LONG).show()
                 vm.insertStudents(newStu)
