@@ -23,7 +23,7 @@ class StudentRepository(context: Context) {
     fun searchStudents(query: String){
         db?.mySearch(query)
     }
-    fun sortStudents(students: Students){
+    fun sortStudents(){
         db?.sortByName()
     }
 

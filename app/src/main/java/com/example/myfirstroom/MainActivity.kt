@@ -20,21 +20,13 @@ import kotlinx.coroutines.runBlocking
 import java.lang.Thread.sleep
 
 open class MainActivity : AppCompatActivity() {
-
-    //MY VARIABLES
-
-    //STUDENT LIST
     var studentList = ArrayList<Students>()
-
     //viewModel Object
     lateinit var vm : MainViewModel
-
     //Adapter
     lateinit var adapter: StudentAdapter
-
     //Nested Scroll view
     lateinit var nestedScrollView: NestedScrollView
-
     //PROGRESSBAR
     lateinit var progressBar: ProgressBar
 
@@ -42,10 +34,16 @@ open class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        nestedScrollView = findViewById(R.id.nestedscrollview)
+        progressBar = findViewById(R.id.progress_circular)
+
         vm  = MainViewModel(application)
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+
 
         //create an adapter with data source
         adapter = StudentAdapter({position -> onCardClick(position) }, studentList)
@@ -57,6 +55,7 @@ open class MainActivity : AppCompatActivity() {
     val plus: FloatingActionButton = findViewById(R.id.plus_btn)
         
     sortbtn.setOnClickListener(){
+        vm.sortStudents()
 
     }
 

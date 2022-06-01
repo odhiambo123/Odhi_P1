@@ -34,7 +34,7 @@ class MainViewModel(app: Application):AndroidViewModel(app) {
     fun searchStudents(query: String) = viewModelScope.launch {
         repo.searchStudents(query)
     }
-    fun sortStudents(students: Students) = viewModelScope.launch {
-        repo.sortStudents(students)
+    fun sortStudents() = viewModelScope.launch {
+        repo.sortStudents()
     }
 }

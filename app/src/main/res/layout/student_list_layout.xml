@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:id="@+id/fname"
-        android:text="first name "
+        android:text="@string/first_name"
         android:textColor="@color/white"
         android:textColorHint="@color/teal_700"
         android:gravity="center_vertical"
@@ -53,8 +53,6 @@
         android:maxLines="1"
 
         />
-
-
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
