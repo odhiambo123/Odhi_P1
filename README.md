@@ -30,4 +30,5 @@
 - git branch -r
 - git push origin HEAD
 - git pull main \<branch\>
-  git checkout <branch>
+- git checkout \<branch\>
+- git branch --set-upstream-to=origin/main \<branch\>
