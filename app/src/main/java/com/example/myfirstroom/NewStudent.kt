@@ -9,7 +9,7 @@ import android.widget.Toast
 
 class NewStudent : AppCompatActivity() {
 
-    var student: Students? = null
+    var student: Student? = null
 
     lateinit var vm : MainViewModel
 
@@ -28,18 +28,34 @@ class NewStudent : AppCompatActivity() {
         val goBack = Intent(this, ProgressPage::class.java)
 
         val saveStudent: Button = findViewById(R.id.btn_save)
-        saveStudent.setOnClickListener(){
+        saveStudent.setOnClickListener() {
+            if (myStudId.text.isEmpty()){
+                myStudId.setError("Please Enter Id")
+            }
+            else if (nsFirstName.text.isEmpty()) {
+                nsFirstName.setError("please enter the firstname");
+            } else if (nsLastName.text.isEmpty()) {
+                nsLastName.setError("please enter the lastname");
+            } else {
+                val newStu = Student(myStudId.text.toString().toInt(),
+                    nsFirstName.text.toString(),
+                    nsLastName.text.toString())
 
+                vm.insertStudents(newStu)
+                Toast.makeText(this, "success", Toast.LENGTH_LONG).show()
+            }
 
-            if (myStudId.text.isNotEmpty() && nsFirstName.text.isNotEmpty() && nsLastName.text.isNotEmpty()) {
-                val newStu = Students(myStudId.text.toString().toInt(), nsFirstName.text.toString(),nsLastName.text.toString())
+//****************************************************************************************
+            /*if (myStudId.text.isNotEmpty() && nsFirstName.text.isNotEmpty() && nsLastName.text.isNotEmpty()) {
+                val newStu = Student(myStudId.text.toString().toInt(), nsFirstName.text.toString(),nsLastName.text.toString())
+
 
                 Toast.makeText(this, "success", Toast.LENGTH_LONG).show()
                 vm.insertStudents(newStu)
             }else {
                 Toast.makeText(this, "Not Saving Empty input", Toast.LENGTH_LONG).show()
-            }
-           startActivity(goBack)
+            }*/
+           //startActivity(goBack)
         }
         val cancelAtivity: Button = findViewById(R.id.btn_cancel)
 

@@ -8,29 +8,23 @@ import androidx.room.*
 //data access object
 interface StudentsDao {
     //helps to give the contract
-
+    //read
+    @Query("select * from students")
+    fun selectAllStudents(): LiveData<List<Student>>
     //create
     @Insert
-    fun insertStudent(student: Students)
+    fun insertStudent(student: Student)
 
-    //read
-    @Query(value = "select * from students")
-    fun selectStudents(): LiveData<List<Students>>
+    @Query(value = "SELECT * FROM students ORDER BY lastname ASC")
+    fun sortByName(): LiveData<List<Student>>
 
-    @Query(value = "SELECT * FROM students ORDER BY firstname ASC")
-    fun sortByName(): LiveData<List<Students>>
-
-    @Query(value = "SELECT * FROM students WHERE firstname = :query OR lastname = :query")
-    fun mySearch(query:String):LiveData<List<Students>>
-
+    @Query("SELECT * FROM students WHERE firstname like :query OR lastname like :query")
+    fun mySearch(query:String): LiveData<List<Student>>
     //updateStudent
     @Update
-    fun updateStudent(student: Students)
-
+    fun updateStudent(student: Student)
     //delete
     @Delete
-    fun deleteStudent(student: Students)
-
-
+    fun deleteStudent(student: Student)
 
 }

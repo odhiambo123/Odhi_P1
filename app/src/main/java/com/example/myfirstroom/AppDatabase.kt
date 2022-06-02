@@ -14,7 +14,7 @@ import androidx.room.RoomDatabase
 // singleton: need to be created only once .
 
 //1 ANNOTATION  //2 ENTITIES
-@Database(entities = [Students::class], version = 1, exportSchema = false)
+@Database(entities = [Student::class], version = 1, exportSchema = false)
 //3  ABSTRACT AND EXTEND
 abstract class AppDatabase : RoomDatabase(){
     //4 ABSTRACT AND RETURN DAO
@@ -38,6 +38,7 @@ abstract class AppDatabase : RoomDatabase(){
         fun destroyInstance(){
             INSTANCE = null
         }
+
 
     }
 

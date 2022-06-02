@@ -31,7 +31,7 @@ class EditEntity : AppCompatActivity() {
         lname.setText(intent.getStringExtra("Lname"))
 
         updateStudent.setOnClickListener{
-            vm.updateStudents(Students(id.text.toString().toInt(), fname.text.toString(), lname.text.toString()))
+            vm.updateStudents(Student(id.text.toString().toInt(), fname.text.toString(), lname.text.toString()))
 
             startActivity(fromMain)
         }
@@ -43,7 +43,7 @@ class EditEntity : AppCompatActivity() {
 
 
         deleteStudent.setOnClickListener {
-            vm.deleteStudents(Students(id.text.toString().toInt(), fname.text.toString(), lname.text.toString()))
+            vm.deleteStudents(Student(id.text.toString().toInt(), fname.text.toString(), lname.text.toString()))
             //startActivity(goBack)
 
             startActivity(fromMain)

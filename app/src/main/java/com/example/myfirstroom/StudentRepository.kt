@@ -4,27 +4,29 @@ import android.content.Context
 import androidx.lifecycle.LiveData
 
 class StudentRepository(context: Context) {
-
-    var db:StudentsDao? = AppDatabase.getInstance(context)?.studentDao()!!
+    var db:StudentsDao = AppDatabase.getInstance(context)?.studentDao()!!
 
     //fetch all students
-    fun getAllStudents(): LiveData<List<Students>>?{
-        return db?.selectStudents()
+    fun selectAllStudents(): LiveData<List<Student>>{
+        return db.selectAllStudents()
     }
-    fun insertStudents(students: Students){
-        db?.insertStudent(students)
+
+    fun insertStudent(student: Student){
+        db.insertStudent(student)
     }
-    fun updateStudents(students: Students){
-        db?.updateStudent(students)
-    }
-    fun deleteStudents(students: Students){
-        db?.deleteStudent(students)
+
+    fun sortByName(){
+        db.sortByName()
     }
     fun searchStudents(query: String){
-        db?.mySearch(query)
+        db.mySearch(query)
     }
-    fun sortStudents(students: Students){
-        db?.sortByName()
+
+    fun updateStudents(student: Student){
+        db.updateStudent(student)
+    }
+    fun deleteStudent(student: Student){
+        db.deleteStudent(student)
     }
 
 }

@@ -18,4 +18,6 @@
     <string name="search_btn">search button</string>
     <string name="sort">sort</string>
     <string name="retry">Retry</string>
+    <string name="crud_operation_p1">CRUD OPERATION P1</string>
+    <string name="new_student">New student</string>
 </resources>
