@@ -17,9 +17,11 @@
         android:theme="@style/Theme.MyFirstRoom"
         tools:targetApi="31">
         <activity
+            android:name=".Search"
+            android:exported="false" />
+        <activity
             android:name=".ProgressPage"
             android:exported="false" />
-
         <activity
             android:name=".EditEntity"
             android:exported="false" />
