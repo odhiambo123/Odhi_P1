@@ -28,6 +28,7 @@ open class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         vm = MainViewModel(application)
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
@@ -39,13 +40,9 @@ open class MainActivity : AppCompatActivity() {
         //take the views we adapter and then assing it to the custom adapter we created
         recyclerView.adapter = adapter
         val sortbtn: Button = findViewById(R.id.sort_btn)
-        //val searchbtn : FloatingActionButton = findViewById(R.id.search_btn)
+        val searchbtn : Button = findViewById(R.id.search_btn)
         val plus: FloatingActionButton = findViewById(R.id.plus_btn)
         val progressBar : ProgressBar =  findViewById(R.id.progress_circular)
-
-        /*progressBar.setOnClickListener(){
-            progressBar.setProgress(9,true)
-        }*/
 
         plus.setOnClickListener()
         {
@@ -58,16 +55,16 @@ open class MainActivity : AppCompatActivity() {
             vm.sortByName()
 
         }
+        searchbtn.setOnClickListener(){
+            val myIntent = Intent(this, Search::class.java)
+            startActivity(myIntent)
+        }
 
-        vm.allStudents?.observe(this, { studentList ->
+        vm.allStudents?.observe(this) { studentList ->
             getStudents(studentList)
-        })
-
-
+        }
 
     }
-
-
 
     fun onCardClick(position: Int) {
         //delay(10000L)

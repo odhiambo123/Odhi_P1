@@ -16,28 +16,43 @@
         android:layout_marginTop="16dp"
         android:gravity="center_vertical"
         android:text="@string/crud_operation_p1"
-        android:textSize="20sp"
+        android:textSize="25sp"
+        android:background="@drawable/gradient"
         />
 
 
-    <Button
-        android:id="@+id/sort_btn"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sort"
-        android:layout_gravity="bottom"
-        />
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp">
 
-    <Button
-        android:id="@+id/retry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:visibility="gone"
-        android:visibility="visible"
-        android:text="@string/retry"
-        android:textAllCaps="false"
+        <Button
+            android:id="@+id/sort_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sort"
+            android:layout_gravity="end"
+            />
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:layout_centerHorizontal="true"
+            />
+        <Button
+            android:id="@+id/retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:visibility="gone"
+            android:visibility="visible"
+            android:text="@string/retry"
+            android:textAllCaps="false"
+            android:layout_alignParentEnd="true"
+            />
 
-        />
+    </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"

@@ -17,7 +17,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center_vertical"
         android:text="@string/new_student"
-        android:textSize="20sp"
+        android:textSize="35sp"
         />
 
     <!--Start of Id field-->
@@ -27,6 +27,8 @@
         android:layout_height="wrap_content"
         app:helperText="Enter ID"
         android:layout_marginStart="16dp"
+        android:textSize="20sp"
+
 
         />
 
@@ -47,6 +49,7 @@
         android:layout_height="wrap_content"
         app:helperText="@string/First_Name"
         android:layout_marginStart="16dp"
+        android:textSize="20sp"
         />
 
     <com.google.android.material.textfield.TextInputEditText

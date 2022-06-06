@@ -16,6 +16,7 @@
         android:padding="5dp"
         android:background="@drawable/cardcolor"
 
+
         >
 
     <TextView
@@ -26,6 +27,7 @@
         android:textColor="@color/white"
         app:drawableStartCompat="@drawable/ic_baseline_person_24"
         android:gravity="center_vertical"
+        android:textSize="25sp"
 
 
         />
@@ -34,12 +36,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:id="@+id/fname"
-        android:text="first name "
+        android:text="@string/first_name"
         android:textColor="@color/white"
         android:textColorHint="@color/teal_700"
         android:gravity="center_vertical"
         android:ellipsize="end"
         android:maxLines="1"
+        android:textSize="20sp"
         />
     <TextView
         android:layout_width="130sp"
@@ -51,6 +54,7 @@
         android:gravity="center_vertical"
         android:ellipsize="end"
         android:maxLines="1"
+        android:textSize="20sp"
 
         />
 
