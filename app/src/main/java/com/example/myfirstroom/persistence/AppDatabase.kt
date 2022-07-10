@@ -1,9 +1,11 @@
-package com.example.myfirstroom
+package com.example.myfirstroom.persistence
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.myfirstroom.model.Student
+
 //6 points here
 // 1 holder calss. ANNOTATION
 // 2 ENTITIES
@@ -27,7 +29,7 @@ abstract class AppDatabase : RoomDatabase(){
             if (INSTANCE == null){
                 //6 acquire an instance of RoomDB BUILDER
                 synchronized(AppDatabase::class){
-                    INSTANCE = Room.databaseBuilder(context.applicationContext,AppDatabase::class.java,
+                    INSTANCE = Room.databaseBuilder(context.applicationContext, AppDatabase::class.java,
                         "students.db").fallbackToDestructiveMigration().allowMainThreadQueries().build()
                 }
             }

@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myfirstroom.model.Student
 
 class StudentAdapter(private val onCardClick: (position: Int) -> Unit,
                      private var studentList:List<Student>): RecyclerView.Adapter<ViewHolder>()

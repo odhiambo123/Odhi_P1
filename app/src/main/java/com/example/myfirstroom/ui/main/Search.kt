@@ -1,8 +1,9 @@
-package com.example.myfirstroom
+package com.example.myfirstroom.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.SearchView
+import com.example.myfirstroom.R
 
 class Search : AppCompatActivity() {
     lateinit var searchView: SearchView

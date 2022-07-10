@@ -1,20 +1,19 @@
-package com.example.myfirstroom
+package com.example.myfirstroom.ui.main
 
-import android.app.SearchManager
-import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.view.Menu
 import android.widget.Button
 import android.widget.ProgressBar
-import android.widget.SearchView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myfirstroom.*
+import com.example.myfirstroom.model.Student
+import com.example.myfirstroom.ui.details.EditEntity
+import com.example.myfirstroom.ui.details.NewStudent
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.progressindicator.CircularProgressIndicator
 
 open class MainActivity : AppCompatActivity() {
     var studentList = ArrayList<Student>()
@@ -43,6 +42,7 @@ open class MainActivity : AppCompatActivity() {
         val searchbtn : Button = findViewById(R.id.search_btn)
         val plus: FloatingActionButton = findViewById(R.id.plus_btn)
         val progressBar : ProgressBar =  findViewById(R.id.progress_circular)
+
 
         plus.setOnClickListener()
         {
@@ -83,6 +83,12 @@ open class MainActivity : AppCompatActivity() {
     }
 
     fun mySearch(query: String?) {
+        println("query:::$query")
+        if (query != null) {
+            vm.searchStudents(query)
+        }
+
+
 
     }
 

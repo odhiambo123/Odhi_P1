@@ -1,16 +1,10 @@
-package com.example.myfirstroom
+package com.example.myfirstroom.ui.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import kotlinx.coroutines.delay
-import java.lang.Thread.sleep
-import java.sql.Time
-import java.sql.Timestamp
-import kotlin.concurrent.timer
-import kotlin.concurrent.timerTask
-import kotlin.system.measureTimeMillis
+import com.example.myfirstroom.R
 
 class ProgressPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

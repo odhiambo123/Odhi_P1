@@ -1,8 +1,10 @@
-package com.example.myfirstroom
+package com.example.myfirstroom.ui.main
 
 import android.app.Application
 import androidx.lifecycle.*
 import androidx.lifecycle.LiveData
+import com.example.myfirstroom.model.Student
+import com.example.myfirstroom.repository.StudentRepository
 import kotlinx.coroutines.launch
 
 class MainViewModel(app: Application):AndroidViewModel(app) {

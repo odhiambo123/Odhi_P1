@@ -1,7 +1,8 @@
-package com.example.myfirstroom
+package com.example.myfirstroom.persistence
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.myfirstroom.model.Student
 
 @Dao
 //this is the second Class we make

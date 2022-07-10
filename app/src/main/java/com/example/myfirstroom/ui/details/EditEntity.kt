@@ -1,4 +1,4 @@
-package com.example.myfirstroom
+package com.example.myfirstroom.ui.details
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,9 +6,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myfirstroom.ui.main.ProgressPage
+import com.example.myfirstroom.R
+import com.example.myfirstroom.model.Student
+import com.example.myfirstroom.ui.main.MainViewModel
 
 class EditEntity : AppCompatActivity() {
-    lateinit var vm :MainViewModel
+    lateinit var vm : MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
 

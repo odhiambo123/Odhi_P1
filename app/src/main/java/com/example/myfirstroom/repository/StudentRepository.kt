@@ -1,10 +1,13 @@
-package com.example.myfirstroom
+package com.example.myfirstroom.repository
 
 import android.content.Context
 import androidx.lifecycle.LiveData
+import com.example.myfirstroom.model.Student
+import com.example.myfirstroom.persistence.AppDatabase
+import com.example.myfirstroom.persistence.StudentsDao
 
 class StudentRepository(context: Context) {
-    var db:StudentsDao = AppDatabase.getInstance(context)?.studentDao()!!
+    var db: StudentsDao = AppDatabase.getInstance(context)?.studentDao()!!
 
     //fetch all students
     fun selectAllStudents(): LiveData<List<Student>>{

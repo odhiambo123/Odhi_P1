@@ -1,4 +1,4 @@
-package com.example.myfirstroom
+package com.example.myfirstroom.ui.details
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.myfirstroom.ui.main.ProgressPage
+import com.example.myfirstroom.R
+import com.example.myfirstroom.model.Student
+import com.example.myfirstroom.ui.main.MainViewModel
 
 class NewStudent : AppCompatActivity() {
 
@@ -45,17 +49,6 @@ class NewStudent : AppCompatActivity() {
                 Toast.makeText(this, "success", Toast.LENGTH_LONG).show()
             }
 
-//****************************************************************************************
-            /*if (myStudId.text.isNotEmpty() && nsFirstName.text.isNotEmpty() && nsLastName.text.isNotEmpty()) {
-                val newStu = Student(myStudId.text.toString().toInt(), nsFirstName.text.toString(),nsLastName.text.toString())
-
-
-                Toast.makeText(this, "success", Toast.LENGTH_LONG).show()
-                vm.insertStudents(newStu)
-            }else {
-                Toast.makeText(this, "Not Saving Empty input", Toast.LENGTH_LONG).show()
-            }*/
-           //startActivity(goBack)
         }
         val cancelAtivity: Button = findViewById(R.id.btn_cancel)
 
