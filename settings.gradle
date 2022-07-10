@@ -13,4 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "My First Room"
+include ':benchmark'
 include ':app'
